@@ -43,4 +43,13 @@ class SiriKo(Robot):
 
 class Bixby(Robot):
     def say_samsung(self):
-        print("안녕하세요")
+        print("hello my samsung")
+
+
+# Composition
+class BixbyCal:
+    def __init__(self, name, age):
+        self.Robot = Robot(name, age)
+
+    def cal_add(self, a, b):
+        return self.Robot.cal_add(a, b)
